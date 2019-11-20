@@ -14,5 +14,5 @@ LABEL version="0.0.1"
 LABEL repository="http://github.com/agentd00nut/jekyll-build-optional-deploy-gh-pages"	
 LABEL maintainer="agentd00nut"
 
-ADD entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

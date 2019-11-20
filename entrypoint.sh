@@ -27,12 +27,12 @@ fi
 if [ -z "$GEMFILE" ]; then
 	echo "[!] - Gemfile not defined; defaulting to GemFile";
 	GEMFILE="Gemfile";
-else
-	if [ ! -f "$GEMFILE" ]; then
-		echo "[!!!!] - ${GEMFILE} not found - exiting";
-		die
-	fi
 fi
+if [ ! -f "$GEMFILE" ]; then
+	echo "[!!!!] - ${GEMFILE} not found - exiting";
+	die
+fi
+
 
 # Should we delete the gemlock when building?
 if [ -n "$REMOVE_GEMLOCK" ] && [ "$REMOVE_GEMLOCK" = true ]; then
