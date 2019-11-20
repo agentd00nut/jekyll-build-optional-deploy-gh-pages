@@ -3,7 +3,7 @@
 echo "[!] - Entrypoint has started";
 
 # Should we go up a dir before exiting?
-function die(){
+die(){
 	if [ -n "$JEKYLL_ROOT" ]; then
 		cd ../
 	fi
