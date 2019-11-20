@@ -15,4 +15,4 @@ LABEL repository="http://github.com/agentd00nut/jekyll-build-optional-deploy-gh-
 LABEL maintainer="agentd00nut"
 
 ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
