@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "[!] - Entrypoint has started";
 
@@ -31,6 +31,7 @@ else
 	if [ ! -f "$GEMFILE" ]; then
 		echo "[!!!!] - ${GEMFILE} not found - exiting";
 		die
+	fi
 fi
 
 # Should we delete the gemlock when building?
@@ -101,6 +102,8 @@ if [ "$DEPLOY_SITE" = true ]; then
 	rm -fr .git && \
 	
 	cd ../
+fi
 
 echo '[!] - EntryPoint has finished.'
 die
+
