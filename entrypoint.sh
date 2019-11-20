@@ -7,7 +7,6 @@ die(){
 	if [ -n "$JEKYLL_ROOT" ]; then
 		cd ../
 	fi
-	exit;
 }
 
 # Where should we try to do all of this?
@@ -16,7 +15,7 @@ if [ -z "$JEKYLL_ROOT" ]; then
 else
 	if [ ! -d "${JEKYLL_ROOT}" ]; then
 		echo "[!!!!] - ${JEKYLL_ROOT} not found, exiting!"
-		exit;
+		exit 1;
 	fi
 
   	cd "${JEKYLL_ROOT}";
@@ -31,6 +30,7 @@ fi
 if [ ! -f "$GEMFILE" ]; then
 	echo "[!!!!] - ${GEMFILE} not found - exiting";
 	die
+	exit 1
 fi
 
 
@@ -83,6 +83,7 @@ if [ "$DEPLOY_SITE" = true ]; then
 	if [ ! -d "${BUILD_DIR}" ]; then
 		echo "[!!!!] - ${BUILD_DIR} Not Found, Exiting"
 		die
+		exit 1
 	fi
 	
 	cd "${BUILD_DIR}"
@@ -106,4 +107,5 @@ fi
 
 echo '[!] - EntryPoint has finished.'
 die
+exit
 
