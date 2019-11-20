@@ -15,4 +15,5 @@ LABEL repository="http://github.com/agentd00nut/jekyll-build-optional-deploy-gh-
 LABEL maintainer="agentd00nut"
 
 COPY entrypoint.sh /entrypoint.sh
+CHMOD +x /docker-entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
