@@ -1,6 +1,6 @@
 name: jekyll-build-optional-deploy-gh-pages
 description: 'A Configurable jekyll repo builder.  Change what dir it builds; where and if it deploys.'
-branding: 
+branding:
   icon: 'sliders'
   color: 'purple'
 runs:
