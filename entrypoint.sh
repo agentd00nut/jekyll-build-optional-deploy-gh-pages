@@ -64,8 +64,10 @@ if [ "$DEPLOY_SITE" = true ]; then
 fi
 
 
-echo '[!] - SPECIAL WORKFLOW'
+echo '[!] - SPECIAL WORKFLOW - installing bundler 1.17.1'
 gem install jekyll bundler:1.17.1
+
+echo '[!] - SPECIAL WORKFLOW - installing nodejs'
 apt-get install nodejs
 
 echo '[!] - Installing Gem Bundle'
