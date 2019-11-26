@@ -64,7 +64,8 @@ if [ "$DEPLOY_SITE" = true ]; then
 fi
 
 
-
+echo '[!] - SPECIAL WORKFLOW'
+gem install jekyll bundler:1.17.1
 
 echo '[!] - Installing Gem Bundle'
 bundle install
