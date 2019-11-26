@@ -67,7 +67,11 @@ fi
 echo '[!] - SPECIAL WORKFLOW - installing bundler 1.17.1'
 gem install jekyll bundler:1.17.1
 
+echo '[!] - SPECIAL WORKFLOW - installing execjs'
+gem install execjs
 
+echo '[!] - SPECIAL WORKFLOW - installing therubyracer'
+gem install therubyracer
 
 echo '[!] - Installing Gem Bundle'
 bundle install
