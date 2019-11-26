@@ -66,6 +66,7 @@ fi
 
 echo '[!] - SPECIAL WORKFLOW'
 gem install jekyll bundler:1.17.1
+apt-get install nodejs
 
 echo '[!] - Installing Gem Bundle'
 bundle install
