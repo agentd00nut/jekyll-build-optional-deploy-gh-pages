@@ -72,6 +72,11 @@ bundle install
 echo -n '[!] - Jekyll Version: '
 bundle list | grep "jekyll ("
 
+if [ -n "$DELETE_BEFORE_BUILD" ]; then
+	echo -n "[!] - Deleting ${DELETE_BEFORE_BUILD}"
+	rm -rf ${DELETE_BEFORE_BUILD};
+fi
+
 echo '[!] - Building '
 bundle exec jekyll build
 

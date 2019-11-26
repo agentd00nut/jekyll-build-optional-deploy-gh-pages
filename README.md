@@ -19,6 +19,9 @@ BUILD_DIR and REMOTE_BRANCH don't matter if DEPLOY_SITE is not `true`... obvious
 `REMOVE_GEMLOCK` **Default**:`true` When `true` we'll `rm Gemfile.lock` before trying to build the jekyll site.
 
 
+`DELETE_BEFORE_BUILD` **Default**:`no default!`... If set calls `rm -rf <>` before building the site... Useful for removing directories you don't want in your final site for whatever reason.
+
+
 `DEPLOY_SITE` **Default**:`true` If we should try and build the site and deploy it the REMOTE_DIR.
 
 
