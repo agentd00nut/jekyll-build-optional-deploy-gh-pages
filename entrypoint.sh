@@ -86,7 +86,7 @@ fi
 
 echo '[!] - SPECIAL WORKFLOW - updating apt-get trying to install nodejs'
 apt-get update
-apt-get install nodejs
+apt-get -y install nodejs
 
 
 echo '[!] - Building '
