@@ -67,14 +67,14 @@ fi
 echo '[!] - SPECIAL WORKFLOW - installing bundler 1.17.1'
 gem install jekyll bundler:1.17.1
 
+echo '[!] - Installing Gem Bundle'
+bundle install
+
 echo '[!] - SPECIAL WORKFLOW - installing execjs'
 gem install execjs
 
 echo '[!] - SPECIAL WORKFLOW - installing therubyracer'
 gem install therubyracer
-
-echo '[!] - Installing Gem Bundle'
-bundle install
 
 echo -n '[!] - Jekyll Version: '
 bundle list | grep "jekyll ("
@@ -84,8 +84,14 @@ if [ -n "$DELETE_BEFORE_BUILD" ]; then
 	rm -rf ${DELETE_BEFORE_BUILD};
 fi
 
+echo '[!] - SPECIAL WORKFLOW - updating apt-get trying to install nodejs'
+apt-get update
+apt-get install nodejs
+
+
 echo '[!] - Building '
 bundle exec jekyll build
+
 
 
 if [ "$DEPLOY_SITE" = true ]; then	
