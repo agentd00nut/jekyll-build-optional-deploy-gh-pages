@@ -89,7 +89,7 @@ apt-get update
 apt-get -y install nodejs
 
 
-echo '[!] - Building '
+echo '[!] - Building -- with future!'
 bundle exec jekyll build --future
 
 
